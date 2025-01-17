@@ -1,9 +1,13 @@
 #!/bin/bash
 #
-# Bash Scripto to Automate ECommerce Application Deployment
+# Bash Script to Automate ECommerce Application Deployment
 
 
+#######################################
 # Print a message in a given color.
+# Arguments:
+#   Color. eg: green, red
+#######################################
 function print_color(){
   NC='\033[0m' # No Color
 
@@ -17,7 +21,11 @@ function print_color(){
 }
 
 
+#######################################
 # Check the status of a given service. If not active exit script
+# Arguments:
+#   Service Name. eg: firewalld, mariadb
+#######################################
 function check_service_status(){
   service_is_active=$(sudo systemctl is-active $1)
 
@@ -30,7 +38,11 @@ function check_service_status(){
   fi
 }
 
+#######################################
 # Check the status of a firewalld rule. If not configured exit.
+# Arguments:
+#   Port Number. eg: 3306, 80
+#######################################
 function is_firewalld_rule_configured(){
 
   firewalld_ports=$(sudo firewall-cmd --list-all --zone=public | grep ports)
@@ -45,7 +57,12 @@ function is_firewalld_rule_configured(){
 }
 
 
+#######################################
 # Check if a given item is present in an output
+# Arguments:
+#   1 - Output
+#   2 - Item
+#######################################
 function check_item(){
   if [[ $1 = *$2* ]]
   then
