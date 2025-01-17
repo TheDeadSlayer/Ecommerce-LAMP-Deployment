@@ -2,7 +2,7 @@
 
 This project demonstrates the automation of deploying a sample ecommerce application on LAMP stack via a BASH script
 
-The BASH is cript is called deploy-application.sh
+The BASH is script is called deploy-application.sh
 
 Here's are the steps deploy it on CentOS systems (outlined in the BASH Script):
 
