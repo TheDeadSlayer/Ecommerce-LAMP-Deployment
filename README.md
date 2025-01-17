@@ -1,6 +1,6 @@
 # Introduction
 
-This is a sample e-commerce application built for learning purposes.
+This project is a demo of deploying a sample ecommerce application on LAMP stack.
 
 Here's how to deploy it on CentOS systems:
 
